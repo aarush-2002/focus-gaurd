@@ -60,7 +60,7 @@ export const FocusGuard: React.FC<FocusGuardProps> = ({ subject, onComplete, onC
         if (isAlarmActive) {
           audioRef.current?.pause();
           setIsAlarmActive(false);
-          speak("Welcome back!");
+          speak("Yeah I knew you love her");
         }
         setState("present");
         absentSinceRef.current = null;
@@ -80,13 +80,13 @@ export const FocusGuard: React.FC<FocusGuardProps> = ({ subject, onComplete, onC
           setIsAlarmActive(true);
           setState("absent");
           audioRef.current?.play().catch(() => {});
-          speak("ALARM! Return to your seat!");
+          speak("Mumtaz will leave you if you stopped studying");
         }
       } else if (elapsed >= config.warning_delay) {
         if (!isWarningSent) {
           setIsWarningSent(true);
           setState("warning");
-          speak("Warning! You left your seat!");
+          speak("Mumtaz will leave you if you stopped studying");
         }
       }
     }

@@ -121,6 +121,17 @@ export const Dashboard: React.FC<DashboardProps> = ({ onStartSession }) => {
                   </div>
                 </button>
               ))}
+              <button
+                onClick={() => onStartSession("Air Writing")}
+                className="mc-slot group p-4 flex flex-col items-center justify-center gap-3 hover:bg-[#9b9b9b] transition-all active:scale-95 border-[#FCDB05]"
+              >
+                <div className="text-3xl group-hover:scale-110 transition-transform">
+                  ✍️
+                </div>
+                <div className="text-[10px] font-bold uppercase text-center leading-tight text-[#FCDB05]">
+                  Air Writing
+                </div>
+              </button>
             </div>
           </div>
 
