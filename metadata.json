@@ -1,0 +1,5 @@
+{
+  "name": "FocusGuard: IIT Patna Study Companion",
+  "description": "AI-powered motion detection and focus monitoring system for IIT Patna students.",
+  "requestFramePermissions": ["camera", "microphone"]
+}
