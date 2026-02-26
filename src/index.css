@@ -1,26 +1,47 @@
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&display=swap');
+@import url('https://fonts.cdnfonts.com/css/minecraft-4');
 @import "tailwindcss";
 
 @theme {
-  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  --font-mc: "Minecraft", monospace;
 }
 
 @layer base {
   body {
-    @apply bg-black text-white antialiased selection:bg-emerald-500 selection:text-black;
-    font-family: var(--font-mono);
+    @apply bg-[#1a1a1a] text-white antialiased selection:bg-[#5D9B3C] selection:text-white;
+    font-family: var(--font-mc);
+    image-rendering: pixelated;
   }
 }
 
-/* Custom scrollbar for the dark theme */
+@layer components {
+  .mc-panel {
+    @apply bg-[#c6c6c6] border-[4px] border-t-[#ffffff] border-l-[#ffffff] border-b-[#555555] border-r-[#555555] shadow-[4px_4px_0_0_rgba(0,0,0,0.5)];
+  }
+  
+  .mc-slot {
+    @apply bg-[#8b8b8b] border-[4px] border-t-[#373737] border-l-[#373737] border-b-[#ffffff] border-r-[#ffffff];
+  }
+
+  .mc-button {
+    @apply bg-[#c6c6c6] border-[4px] border-t-[#ffffff] border-l-[#ffffff] border-b-[#555555] border-r-[#555555] 
+           hover:bg-[#d6d6d6] active:border-t-[#555555] active:border-l-[#555555] active:border-b-[#ffffff] active:border-r-[#ffffff]
+           px-4 py-2 text-shadow-sm transition-all;
+  }
+
+  .mc-text-shadow {
+    text-shadow: 2px 2px 0px #3f3f3f;
+  }
+}
+
+/* Custom scrollbar */
 ::-webkit-scrollbar {
-  width: 4px;
+  width: 12px;
 }
 
 ::-webkit-scrollbar-track {
-  @apply bg-transparent;
+  @apply bg-[#1a1a1a];
 }
 
 ::-webkit-scrollbar-thumb {
-  @apply bg-white/10 rounded-full hover:bg-white/20 transition-colors;
+  @apply bg-[#8b8b8b] border-[3px] border-[#373737];
 }
